@@ -38,6 +38,17 @@
     
 
 
+main {
+  border: 12px solid var(--c-accent);
+}
+
+header {
+  border: 12px solid var(--c-accent);
+}
+
+footer {
+  border: 12px solid var(--c-accent);
+}
 
 
 
