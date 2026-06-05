@@ -1,0 +1,57 @@
+/* 
+ *
+ * layout.css
+ * @carlwebdev
+ *
+ */
+
+html, body {
+  min-height: 100%; /* */
+  /* height: 100%; */
+}
+/*
+main {
+  border: 12px solid var(--c-accent);
+}
+
+header {
+  border: 12px solid var(--c-accent);
+}
+
+footer {
+  border: 12px solid var(--c-accent);
+}
+*/
+
+
+section {
+  /* border: 3px solid red; */ /* DEMO */
+}
+
+
+
+.wrapper {
+  /* position: relative; */ /* PRO EL POPOVER PSEUDO ABSOLUTE */
+  max-width: 1240px;
+  margin-inline: auto; 
+  /* margin-block: 4em; */
+  padding-inline: 4em; 
+  
+  /* DEMO */
+  /* max-width: 576px; */
+  max-width: 1024px;
+  /* border: 2px solid var(--c-accent); */
+}  
+
+
+@media screen and (max-width: 1024px) {
+
+  section {
+    grid-template-columns: 1fr; /* TODO */
+  }
+
+  .wrapper {
+    padding-inline: 2em; 
+  }  
+
+} /* MEDIA-QUERY */

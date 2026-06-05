@@ -1,0 +1,14 @@
+/* 
+ *
+ * a css debugger
+ * @carlwebdev
+ *
+ */
+
+ *, *::before, *::after {
+	outline: 1px solid gray; /* Add a thin outline to all elements and their pseudo-elements for debugging purposes */
+	/* box-sizing: border-box; */ /* Ensure padding and borders are included in the element's total width and height for easier debugging */
+
+	background-color: rgba(255, 0, 0, 0.1); /* Add a light red background color to all elements for better visibility during debugging */
+
+}

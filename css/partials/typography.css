@@ -55,7 +55,18 @@ a, a:hover, a:visited {
 	font-weight: bold; /* NOT !!! */
 	}
 	a:hover {
-		/* text-decoration:underline; */ /* HAVE THIS ONLY ISIDE HTML MODULE THINGEE */
+		/* */ 
+		text-decoration:underline;  /* HAVE THIS ONLY ISIDE HTML MODULE THINGEE */
+		text-decoration-thickness: 2px; /* TEST */
+		/* */ text-underline-offset: 0.2em;  /* TEST */
+		text-decoration-color: var(--c-accent); /* TEST */
+		/* text-decoration-skip-ink: none; */ /* TEST */
+		
+		/* text-decoration-color: var(--c-accent); */ /* TEST */
+		/* text-decoration-skip-ink: none; */ /* TEST */		
+
+
+
 	}
 
 	/*
@@ -64,3 +75,30 @@ a, a:hover, a:visited {
 
 
 	*/
+
+
+
+	p.highlight{
+
+		&::first-line {
+			font-size: 1.2em;
+			font-weight: bold;
+		}
+		
+		&::first-letter {
+			font-size: 2em;
+			font-weight: bold;
+		}
+
+	}
+
+
+/*
+h1, h2, h3, h4, h5, h6 {
+	color: var(--c-accent);
+}
+*/
+
+:where(h1, h2, h3, h4, h5, h6):is(.accent) {
+	color: var(--c-accent);
+}

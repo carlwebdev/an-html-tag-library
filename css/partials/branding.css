@@ -56,37 +56,44 @@ hr - yes, nice, put it her en the branding partial, as its quite decorative .
 /* 
  * 1 - (TEXT) SELECTION 
  */
- ::-moz-selection {
-	background-color: var(--c-accent); 
-	color: var(--c-text-inv);
-  }
-  ::selection {
-	background-color: var(--c-accent); 
-	color: var(--c-text-inv);
-  }
+::-moz-selection {
+background-color: var(--c-accent); 
+color: var(--c-text-inv);
+}
+::selection {
+background-color: var(--c-accent); 
+color: var(--c-text-inv);
+}
 
 
-  /* 
-   * 2 - CARET (input)  
-   */
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color */
-  /* caret-color: $c_accent; */
-  input, textarea {
-	caret-color: var(--c-accent); /* does it apply only to the line ????? */
+/* 
+ * 2 - CARET (input)  
+ */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/caret-color */
+/* caret-color: $c_accent; */
+input, textarea {
+  caret-color: var(--c-accent); /* does it apply only to the line ????? */
+}
+
+
+/* 
+  * 3 - marker (li)
+  */
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/::marker */
+/* ..... https://www.w3schools.com/tags/tag_summary.asp */  
+li::marker {
+  color: var(--c-accent); /* TEST */
+/* font-size: 1.2em; // ?? para el size???? */
+}
+  
+
+/* BRANDING */
+/*
+li::marker {
+    color: var(--c-accent);
   }
-  
-  
-  /* 
-   * 3 - marker (li)
-   */
-  /* https://developer.mozilla.org/en-US/docs/Web/CSS/::marker */
-  /* ..... https://www.w3schools.com/tags/tag_summary.asp */  
-  li::marker {
-	color: var(--c-accent); /* TEST */
-	/* font-size: 1.2em; // ?? para el size???? */
-  }
-  
-  
+*/
+
   
   /*
    * 4 - CSS accent-color Property

@@ -52,17 +52,32 @@ https://kjmonahan.dev/css-initial-vs-unset/#:~:text=Resets%20a%20CSS%20property%
 */
 
 
-/* BRANDING */
-/*
-li::marker {
-    color: var(--c-accent);
+
+
+nav {
+  /* border: 12px solid black; */ /* DEMO */
+  display: flex;
+  gap: 1em;
+  margin-block: 2em;
+
+  a {
+    /* font-size: 1.4em; */
+
+    color: white;
+
+    &:hover {
+      color: var(--c-accent); /* TODO */
+    }
   }
-*/
+  
 
-
-
+}
 
   
+
+
+
+
 button {
 
     color: var(--c-accent);
@@ -634,6 +649,9 @@ dialog {
 marquee {
 
   background-color: var(--c-accent);
+
+  color: white; /* TODO */
+
   padding-block: 1em;
   font-size: 1.618em;
   font-weight: bold;

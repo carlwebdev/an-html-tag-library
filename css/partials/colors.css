@@ -1,0 +1,35 @@
+/* 
+ *
+ * colors.css
+ * @carlwebdev
+ *
+ */
+:root {
+  /* */ 
+  color-scheme: light dark; 
+  --c-accent: #60f;
+  /*
+  background-color: white;
+  color: black;
+  */  
+
+  /* CSS VARIABLES */ 
+  /* --demo-img : url('https://picsum.photos/1920'); */
+  --demo-img: 'https://picsum.photos/1920';
+}
+  
+    
+
+  /* If user prefers a dark appearance */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      /*
+      background-color: black;
+      color: white;
+      */
+      /* */
+      --c-accent: #f06;
+      
+    }
+  }
+    
