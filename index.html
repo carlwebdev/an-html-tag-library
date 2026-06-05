@@ -10,8 +10,14 @@
 <!--Favicon-->  
 <!-- <link rel="icon" type="image/x-icon" href="/images/favicon.ico"> -->
 <link rel="icon" type="image/x-icon" href="favicon.svg">
-<!--CSS-->  
+<!--CSS-->
 <link rel="stylesheet" href="css/style.css">
+<!--JS paths config-->
+<script>
+  const PATHS = {
+    demoImg: 'https://picsum.photos/1920'
+  };
+</script>
 
 <!--  
 <meta name="color-scheme" content="dark light">
@@ -23,31 +29,18 @@
 <header>
   <div class="wrapper">
     <h1>An HTML Tag Library</h1>  
-    <hr>
-    <hr>
   </div>
 </header>
 
-<!-- todo - add landmark header & footer, and scrol navigatin tto epashs for esections ...  tag , with separat ss artial for erh main layt thingees . .-->
-
-  <!-- 
-  <h2>Text Related</h2>
-  <marquee><h2>Text Related</h2></marquee>
-  -->
-
-
-
 <main>
-  <div class="wrapper">
+  
     
 
 <section> 
-
+  <div class="wrapper">
 
   <h2 class="accent">Text Related</h2>
-  <marquee><h2>Text Related</h2></marquee>
-
-
+  <!-- <marquee><h2>Text Related</h2></marquee> -->
 
   <article>
     <h4 class="accent">Headings</h4>
@@ -62,7 +55,6 @@
   
 
   <!-- --> <hr> 
-
 
   <article>
     <h4 class="accent">Text</h4>
@@ -85,44 +77,20 @@
 
 
 
-  <hr>
+
+
+  <article>
+    <h3><code>&lt;hr&gt;</code> horizontal rule</h3>
+    <hr>
+  </article>
 
 
 
-<article>
-  <h3><code>&lt;hr&gt;</code> horizontal rule</h3>
-  <hr>
-</article>
+  <article>
+    <h3><code>&lt;marquee&gt;</code> <!-- marquee --></h3>
+    <marquee>marquee</marquee>
+  </article>
 
-
-
-
-  
-
-
-  <h4 class="accent">Stuff...</h4>
-
-  <div class="grid">    
-      
-    <article>
-      <h3><code>&lt;a&gt;</code> anchor</h3>
-      <p>Visit <a href="https://www.example.com" target="_blank">Example.com</a> for more information.</p>
-    </article>
-
-    <article>
-      <h3><code>&lt;abbr&gt;</code> abbreviation</h3>
-      <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
-    </article>  
-  
-    <article>
-      <h3><code>&lt;cite&gt;</code> citation</h3>
-      <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
-    </article> 
-
-    <article>
-      <h3><code>&lt;q&gt;</code> short quotation (quote)</h3>
-      <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q> We hope they succeed.</p>
-    </article> 
 
     <article>
       <h3>Blockquote (blockquote)</h3>
@@ -130,13 +98,100 @@
         This is a blockquote.
       </blockquote>
     </article>
+    
+    
 
-    <article>
-      <h3><code>&lt;s&gt;</code> strike-out</h3>
-      <p><s>Only 50 tickets left!</s> - SOLD OUT!</p>
-    </article> 
 
-  </div> <!-- /grid -->
+  </div> <!-- /wrapper -->
+</section>
+
+
+
+
+
+<section> 
+  <div class="wrapper">
+      <h2 class="accent"><!-- Click --> Interactive Elements</h2>
+    
+      <div class="grid">
+
+
+        <article>
+          <h3><code>&lt;a&gt;</code> anchor</h3>
+          <p>Visit <a href="https://www.example.com" target="_blank">Example.com</a> for more information.</p>
+        </article>
+        
+    
+        <article>
+          <h3><code>&lt;nav&gt;</code> Anchor (a)</h3>
+          <a href="https://www.example.com" title="This is a link" target="_blank">This is a link</a>
+        </article>
+
+        <article>
+          <h3><code>&lt;button&gt;</code> <!-- button --></h3>
+          <button>Button</button>
+        </article>
+        
+
+
+        <article>
+          <h3><code>&lt;menu&gt;</code> menu</h3>
+          <menu>
+            <li>Coffee</li>
+            <li>Tea</li>
+            <li>Milk</li>
+          </menu>
+        </article>
+      
+        <article>
+          <h3><code>&lt;nav&gt;</code> nav</h3>
+          <nav>
+            <a href="">Coffee</a>
+            <a href="">Tea</a>
+            <a href="">Milk</a>
+          </nav>
+        </article>
+
+
+
+      </div> <!-- /grid -->
+
+  </div> <!-- /wrapper -->
+</section>
+
+
+
+
+
+<section> 
+  <div class="wrapper">
+
+    <h2 class="accent">Text Formatting</h2>
+
+    <div class="grid">    
+        
+      <article>
+        <h3><code>&lt;abbr&gt;</code> abbreviation</h3>
+        <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+      </article>  
+    
+      <article>
+        <h3><code>&lt;cite&gt;</code> citation</h3>
+        <p><cite>The Scream</cite> by Edward Munch. Painted in 1893.</p>
+      </article> 
+
+      <article>
+        <h3><code>&lt;q&gt;</code> short quotation (quote)</h3>
+        <p>WWF's goal is to: <q>Build a future where people live in harmony with nature.</q> We hope they succeed.</p>
+      </article> 
+      <article>
+        <h3><code>&lt;s&gt;</code> strike-out</h3>
+        <p><s>Only 50 tickets left!</s> - SOLD OUT!</p>
+      </article> 
+
+    </div> <!-- /grid -->
+
+  </div> <!-- /wrapper -->
 </section>
       
       
@@ -146,12 +201,10 @@
 
 
 
-<hr>
-
-
-
 <section> 
-  
+  <div class="wrapper">
+
+
   <h2 class="accent">List Related</h2>
 
   <div class="grid">
@@ -174,23 +227,6 @@
       </ol>
     </article>
 
-    <article>
-      <h3><code>&lt;menu&gt;</code> menu</h3>
-      <menu>
-        <li>Coffee</li>
-        <li>Tea</li>
-        <li>Milk</li>
-      </menu>
-    </article>
-  
-    <article>
-      <h3><code>&lt;nav&gt;</code> nav</h3>
-      <nav>
-        <a href="">Coffee</a>
-        <a href="">Tea</a>
-        <a href="">Milk</a>
-      </nav>
-    </article>
 
 
     <article>
@@ -205,6 +241,8 @@
     
     
   </div> <!-- /grid -->
+
+  </div> <!-- /wrapper -->
 </section> 
 
 
@@ -214,57 +252,17 @@
 
 
 
-<hr>
-
-
-    <section> 
-  
-      <h2 class="accent">Click</h2>
-    
-      <div class="grid">
-
-        
-
-
-
-    <article>
-      <h3><code>&lt;nav&gt;</code> Anchor (a)</h3>
-      <a href="https://www.example.com" title="This is a link" target="_blank">This is a link</a>
-    </article>
-
-
-
-    <article>
-      <h3><code>&lt;button&gt;</code> <!-- button --></h3>
-      <button>Button</button>
-    </article>
-    
-    
-
-
-  </div> <!-- /grid -->
-</section>
-
 
   
 
 
 
+<section> 
+  <div class="wrapper">
 
+    <h2 class="accent">Code-related</h2>
 
-
-
-
-
-
-
-
-
-  
-    <hr>
-  
-    <h2>Code-related</h2>
-
+    <!-- 
     <p>Here are the HTML tags related to presenting code:</p>
     <ul>
       <li><code>&lt;code&gt;</code>: Defines a piece of computer code.</li>
@@ -274,261 +272,223 @@
       <li><code>&lt;var&gt;</code>: Defines a variable.</li>
       <li><code>&lt;tt&gt;</code>: Defines teletype text (deprecated in HTML5).</li>
     </ul>
-
+    -->
 
     <div class="grid">
 
-    <article>
-      <h3><code>&lt;code&gt;</code> <!-- code --></h3>
-      <code>console.log('Hello, world!');</code>
-    </article>
+      <article>
+        <h3><code>&lt;kbd&gt;</code> <!-- kbd --></h3>
+        <kbd>Ctrl</kbd> + <kbd>C</kbd>
+      </article>
 
+      <article>
+        <h3><code>&lt;samp&gt;</code> <!-- samp --></h3>
+        <samp>Output: Hello, world!</samp>
+      </article>
 
-    <article>
-      <h3><code>&lt;pre&gt;</code> <!-- pre --></h3>
-      <pre>
-        function helloWorld() {
-            console.log('Hello, world!');
-        }
-        </pre>
-    </article>
+      <article>
+        <h3><code>&lt;code&gt;</code> <!-- code --></h3>
+        <code>console.log('Hello, world!');</code>
+      </article>
+
+      <article>
+        <h3><code>&lt;pre&gt;</code> <!-- pre --></h3>
+        <pre>
+          function helloWorld() {
+              console.log('Hello, world!');
+          }
+          </pre>
+      </article>
     
-    
-
-    <article>
-      <h3><code>&lt;samp&gt;</code> <!-- samp --></h3>
-      <samp>Output: Hello, world!</samp>
-    </article>
-
-    <article>
-      <h3><code>&lt;kbd&gt;</code> <!-- kbd --></h3>
-      <kbd>Ctrl</kbd> + <kbd>C</kbd>
-    </article>
-
-    <article>
-      <h3><code>&lt;var&gt;</code> <!-- var --></h3>
-      <var>x</var> = <var>y</var> + 2;
-    </article>
-    
-    <article>
-      <h3><code>&lt;tt&gt;</code> (deprecated)</h3>
-      <tt>Teletype text</tt>
-    </article>
+      <article>
+        <h3><code>&lt;var&gt;</code> <!-- var --></h3>
+        <var>x</var> = <var>y</var> + 2;
+      </article>
+      
+      <article>
+        <h3><code>&lt;tt&gt;</code> (deprecated)</h3>
+        <tt>Teletype text</tt>
+      </article>
     
     </div> <!-- /grid -->
+
+  </div> <!-- /wrapper -->
+</section>
+
+
+
+<section> 
+  <div class="wrapper">
+
+    <h2 class="accent">Media-related</h2>
     
-    <article>
-      <h3><code>&lt;marquee&gt;</code> <!-- marquee --></h3>
-      <marquee>marquee</marquee>
-    </article>
-
-
-    
-
-
-
-    <hr>
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    <h3>HTML Tags - media-related</h2>
-
-
+    <!-- 
       img, picture, vidoe, audio, iframe, canvas... etc
-  
+
+      <p>Here are some HTML tags related to media:</p>
+      <ul>
+        <li><code>&lt;img&gt;</code>: Embeds an image.</li>
+        <li><code>&lt;picture&gt;</code>: Contains zero or more <code>&lt;source&gt;</code> elements and one <code>&lt;img&gt;</code> element to provide multiple image formats.</li>
+        <li><code>&lt;video&gt;</code>: Embeds a video.</li>
+        <li><code>&lt;audio&gt;</code>: Embeds an audio file.</li>
+        <li><code>&lt;iframe&gt;</code>: Embeds another HTML page.</li>
+        <li><code>&lt;canvas&gt;</code>: Used to draw graphics via scripting (usually JavaScript).</li>
+      </ul>
+
+      <h4>Examples:</h4>
+
+    -->
 
 
+    <div class="grid"> 
 
+        <article> 
+          <h3><code>&lt;img&gt;</code> <!-- image--></h3>
+          <img data-src="demoImg" alt="Example Image">
+        </article>
 
+        <article> 
+          <h3><code>&lt;picture&gt;</code> <!-- picture --></h3>
+          <picture>
+            <!--
+            <source srcset="image.webp" type="image/webp">
+            <source srcset="image.jpg" type="image/jpeg">
+            -->
+            <img src="https://picsum.photos/1920" alt="Example Image">
+          </picture>
+        </article>
 
+        <article> 
+          <h3><code>&lt;iframe&gt;</code> <!-- iframe--></h3>
+          <iframe src="https://www.example.com" width="" height=""></iframe>
+        </article>
 
-
-<section> 
-
-    <h3>Media-related</h3>
-    
-    <p>Here are some HTML tags related to media:</p>
-    <ul>
-      <li><code>&lt;img&gt;</code>: Embeds an image.</li>
-      <li><code>&lt;picture&gt;</code>: Contains zero or more <code>&lt;source&gt;</code> elements and one <code>&lt;img&gt;</code> element to provide multiple image formats.</li>
-      <li><code>&lt;video&gt;</code>: Embeds a video.</li>
-      <li><code>&lt;audio&gt;</code>: Embeds an audio file.</li>
-      <li><code>&lt;iframe&gt;</code>: Embeds another HTML page.</li>
-      <li><code>&lt;canvas&gt;</code>: Used to draw graphics via scripting (usually JavaScript).</li>
-    </ul>
-    
-
-
-
-<h4>Examples:</h4>
-
-
-
-<div class="grid"> 
-
-
-    <article> 
-      <h3><code>&lt;img&gt;</code> <!-- image--></h3>
-      <img src="https://picsum.photos/1920" alt="Example Image">
-    </article>
-
-    <article> 
-      <h3><code>&lt;picture&gt;</code> <!-- picture --></h3>
-      <picture>
-        <!--
-        <source srcset="image.webp" type="image/webp">
-        <source srcset="image.jpg" type="image/jpeg">
-        -->
-        <img src="https://picsum.photos/1920" alt="Example Image">
-      </picture>
-    </article>
-
-    <article> 
-      <h3><code>&lt;iframe&gt;</code> <!-- iframe--></h3>
-      <iframe src="https://www.example.com" width="" height=""></iframe>
-    </article>
-
-    <article> 
-      <h3><code>&lt;iframe&gt;</code> <!-- --> video </h3>
-      <iframe width="" height="" src="https://www.youtube.com/embed/7X8II6J-6mU?si=CmMOSuUj7NTByHXR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </article>
-   
-    <article> 
-      <h3><code>&lt;video&gt;</code> <!-- video --></h3>
-      <video controls>
-        <source src="movie.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>
-    </article>
-
-    <article> 
-      <h3><code>&lt;audio&gt;</code> <!-- audio --> </h3>
-      <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </article>
-
-    <article> 
-      <h3><code>&lt;canvas&gt;</code> <!-- canvas --></h3>
-      <canvas id="myCanvas" width="200" height="100" style="border:1px solid red;"></canvas>
-    </article>
-    
-
-
-    <article> 
-      <p>Example of <code>&lt;figure&gt;</code> & <code>&lt;figcaption&gt;</code>:</p>
-      <figure>
-        <img src="https://picsum.photos/1920" alt="Alt Tag">
-        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
-      </figure>
-    </article>
-
-
-
-</div> <!-- /grid -->
-
-
-
-
-
-
-
-<section> 
-
-
-<div class="grid"> 
-
-    <article>
-      <h3>The caption element</h3>
-
-      <table>
-        <caption>Monthly savings</caption>
-        <tr>
-          <th>Month</th>
-          <th>Savings</th>
-        </tr>
-        <tr>
-          <td>January</td>
-          <td>$100</td>
-        </tr>
-        <tr>
-          <td>February</td>
-          <td>$50</td>
-        </tr>
-      </table>
+        <article> 
+          <h3><code>&lt;iframe&gt;</code> <!-- --> video </h3>
+          <iframe width="" height="" src="https://www.youtube.com/embed/7X8II6J-6mU?si=CmMOSuUj7NTByHXR" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </article>
       
-    </article>
+        <article> 
+          <h3><code>&lt;video&gt;</code> <!-- video --></h3>
+          <video controls>
+            <source src="movie.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </article>
+
+        <article> 
+          <h3><code>&lt;audio&gt;</code> <!-- audio --> </h3>
+          <audio controls>
+            <source src="audio.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        </article>
+
+        <article> 
+          <h3><code>&lt;canvas&gt;</code> <!-- canvas --></h3>
+          <canvas id="myCanvas"></canvas>
+        </article>
+        
+        <article> 
+          <!-- <p>Example of <code>&lt;figure&gt;</code> & <code>&lt;figcaption&gt;</code>:</p> -->
+          <h3><code>&lt;figure&gt;</code> & <code>&lt;figcaption&gt;</code> <!-- canvas --></h3>
+
+          <figure>
+            <img src="https://picsum.photos/1920" alt="Alt Tag">
+            <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+          </figure>
+        </article>
+
+    </div> <!-- /grid -->
+
+  </div> <!-- /wrapper -->
+</section>
 
 
-
-</div> <!-- /grid -->
-
-
-</section>  
 
 
 <section> 
+  <div class="wrapper">
 
 
+    <div class="grid"> </div> <!-- /grid --> 
 
+        <article>
+          <h3><code>&lt;caption&gt;</code><!--The caption element--></h3>
 
-
-
-    <h3>Tables</h3>
-
-<div class="grid"> 
-
-  <article>
-      <div style="overflow-x:auto;">
-        <table>
-          <thead>
+          <table>
+            <caption>Monthly savings</caption>
             <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
-              <th>Header 3</th>
-              <th>Header 4</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Row 1, Cell 1</td>
-              <td>Row 1, Cell 2</td>
-              <td>Row 1, Cell 3</td>
-              <td>Row 1, Cell 4</td>
+              <th>Month</th>
+              <th>Savings</th>
             </tr>
             <tr>
-              <td>Row 2, Cell 1</td>
-              <td>Row 2, Cell 2</td>
-              <td>Row 2, Cell 3</td>
-              <td>Row 2, Cell 4</td>
+              <td>January</td>
+              <td>$100</td>
             </tr>
             <tr>
-              <td>Row 3, Cell 1</td>
-              <td>Row 3, Cell 2</td>
-              <td>Row 3, Cell 3</td>
-              <td>Row 3, Cell 4</td>
+              <td>February</td>
+              <td>$50</td>
             </tr>
-          </tbody>
-        </table>
-      </div>
-  </article>
+          </table>
+          
+        </article>
 
-</div> <!-- /grid -->
+    
 
+  </div> <!-- /wrapper -->
+</section>
+
+
+
+
+
+<section> 
+  <div class="wrapper">
+
+
+    <h2><code>&lt;table&gt;</code> <!-- Tables --></h2>
+
+    <div class="grid"></div> <!-- /grid --> 
+
+      <article>
+          <div style="overflow-x:auto;">
+            <table>
+              <thead>
+                <tr>
+                  <th>Header 1</th>
+                  <th>Header 2</th>
+                  <th>Header 3</th>
+                  <th>Header 4</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Row 1, Cell 1</td>
+                  <td>Row 1, Cell 2</td>
+                  <td>Row 1, Cell 3</td>
+                  <td>Row 1, Cell 4</td>
+                </tr>
+                <tr>
+                  <td>Row 2, Cell 1</td>
+                  <td>Row 2, Cell 2</td>
+                  <td>Row 2, Cell 3</td>
+                  <td>Row 2, Cell 4</td>
+                </tr>
+                <tr>
+                  <td>Row 3, Cell 1</td>
+                  <td>Row 3, Cell 2</td>
+                  <td>Row 3, Cell 3</td>
+                  <td>Row 3, Cell 4</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+      </article>
+
+    
+
+  </div> <!-- /wrapper -->
 </section>
 
 
@@ -538,73 +498,80 @@
 
 
 
-
 <section> 
+  <div class="wrapper">
+
+    <h2><code>&lt;form&gt;</code> <!-- Forms --></h2>
+
+    <div class="grid"> 
+
+      <article>
+          <!-- Search Form -->
+          <form action="/search" method="get">
+            <label for="search">Search:</label>
+            <input type="text" id="search" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+          </form>
+      </article>
+
+      <article>
+
+          <!-- Search Form -->
+          <form class="search-form" action="/search" method="get">
+            <!-- <label for="search">Search:</label> -->
+            <input type="search" id="search" name="search" placeholder="Search...">
+            <button type="submit">Search</button>
+          </form>
+
+      </article>
+
+      <article>
+          <!-- Login Form -->
+          <form action="/login" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
+            <br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <button type="submit">Login</button>
+          </form>
+
+      </article>
+
+      <article>
+
+          <!-- Contact Form -->
+          <form action="/contact" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+            <br>
+            <button type="submit">Send</button>
+          </form>
+          
+      </article>
+
+
+    </div> <!-- /grid -->
 
 
 
-
-    <h3>Forms</h3>
-
-<div class="grid"> 
-
-
-<article>
-    <!-- Search Form -->
-    <form action="/search" method="get">
-      <label for="search">Search:</label>
-      <input type="text" id="search" name="search" placeholder="Search...">
-      <button type="submit">Search</button>
-    </form>
-</article>
-
-<article>
-
-    <!-- Search Form -->
-    <form class="search-form" action="/search" method="get">
-      <!-- <label for="search">Search:</label> -->
-      <input type="search" id="search" name="search" placeholder="Search...">
-      <button type="submit">Search</button>
-    </form>
-
-
-</article>
-
-<article>
-    <!-- Login Form -->
-    <form action="/login" method="post">
-      <label for="username">Username:</label>
-      <input type="text" id="username" name="username" required>
-      <br>
-      <label for="password">Password:</label>
-      <input type="password" id="password" name="password" required>
-      <br>
-      <button type="submit">Login</button>
-    </form>
-
-</article>
-
-<article>
-
-    <!-- Contact Form -->
-    <form action="/contact" method="post">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required>
-      <br>
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required>
-      <br>
-      <label for="message">Message:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
-      <br>
-      <button type="submit">Send</button>
-    </form>
-    
-    
-</article>
-</div> <!-- /grid -->
-
+  </div> <!-- /wrapper -->
 </section>
+
+
+
+
+
+
+
+
 
 
 
@@ -620,7 +587,14 @@
     
 
 
+
+
 <section> 
+  <div class="wrapper">
+
+
+
+
 
 
 
@@ -712,9 +686,7 @@
 
 
 
-
-
-
+ </div> <!-- /wrapper -->
 </section>
 
 
@@ -725,6 +697,10 @@
 
 
 
+
+
+<section> 
+  <div class="wrapper">
 
 
 
@@ -882,16 +858,12 @@
     
     
 
+ </div> <!-- /wrapper -->
+</section>
 
-  </section>
 
 
-
-  </div> <!-- /wrapper --> 
 </main>  
-
-
-
 
 <footer>
    <div class="wrapper">
@@ -899,7 +871,11 @@
   </div> 
 </footer>    
 
+<script>
+  document.querySelectorAll('[data-src]').forEach(el => {
+    el.src = PATHS[el.dataset.src];
+  });
+</script>
 
-
-</body> 
+</body>
 </html>

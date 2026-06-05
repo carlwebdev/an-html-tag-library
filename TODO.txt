@@ -1,0 +1,6 @@
+<!-- todo - add landmark header & footer, and scrol navigatin tto epashs for esections ...  tag , with separat ss artial for erh main layt thingees . .-->
+
+  <!-- 
+  <h2>Text Related</h2>
+  <marquee><h2>Text Related</h2></marquee>
+  -->

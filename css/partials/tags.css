@@ -5,7 +5,7 @@
 https://www.w3schools.com/tags/ref_byfunc.asp
 */
   
-/* BRANDING */
+/* BRANDING, ok, buut typography really ...  or baring, but wehataver  */
 a {
     color: var(--c-accent) !important;
 
@@ -50,6 +50,23 @@ ol, ul {
 Initial / Unset / Revert / Inherit
 https://kjmonahan.dev/css-initial-vs-unset/#:~:text=Resets%20a%20CSS%20property%20to%20its%20inherited%20value%2C%20if%20it's,will%20still%20allow%20for%20inheritance.
 */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -128,16 +145,35 @@ menu {
   display: flex;
   gap: 1em;
 
-
 }
 
 
 
-
-/* dl, dt, dd {
+/* */
+dl, dt, dd {
   margin: 0;
   padding: 0;
-} */
+} 
+dl {
+  border: 3px solid var(--c-accent); /* DEMO */
+  padding: 1em;
+  /*  background-color: var(--c-bg); */
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+  dt {
+    font-weight: bold;
+    color: var(--c-accent);
+  }
+  dd {
+    margin-left: 1em;
+    color: var(--c-text);
+    font-size: 0.9em;
+  }
+
+
 
 
 
@@ -211,7 +247,7 @@ blockquote {
     background-color: #333333; /* Dark Gray */
     border-left: 12px solid var(--c-accent);
     
-    /*
+    /*dialog
     margin: 1.5em 10px;
     padding: 0.5em 10px;   
     */
@@ -260,6 +296,12 @@ blockquote {
    
    
   background-color: var(--c-accent);
+
+  color: var(--c-bg); /* TODO */
+
+
+
+
   padding-inline: 0.4em;
   /*
   padding-inline: 1em;
@@ -288,7 +330,11 @@ blockquote {
  * HTML Tags - media-related - add thigs to reste fie 
  */
 
- img, iframe {
+
+
+ img, iframe,
+  video, audio,
+ iframe, canvas  {
   /*
   max-width: 100%;
   height: auto;
@@ -298,29 +344,27 @@ blockquote {
   border: 3px solid var(--c-accent); 
  }
 
- img {
-  aspect-ratio: 16 / 9;
+
+
+
+img, iframe, video, 
+/* audio, */ /* DOESNT APPLY TO AUDIO BUT WHATEVER */
+canvas {
+  aspect-ratio: var(--img-ar);
+  /* object-fit: cover; */ /* iframe - REQUIRED TO UNSQUISH VIDEOS EEMBEDS */ /* todo - MOVE TO RESTE */ 
+}
+
+img {
   object-fit: cover;
- }
-
-
+}
 
 
  video, audio,
  iframe, canvas {
-  display:block;
+  /* display:block; */
   width: 100%; /* This will make the tag responsive */
   border: 3px solid var(--c-accent); 
  }
-
-
-
- iframe {
-  /* aspect-ratio: 4 / 3; */
-  aspect-ratio: 16 / 9;
-  object-fit: cover; /* REQUIRED TO UNSQUISH VIDEOS EEMBEDS */
-  
- } 
 
 
 
@@ -338,10 +382,15 @@ blockquote {
   width: 100%;
   */
 
-
+  /* STYLES */
+  padding: 1em; 
+  /* background-color: #333333; */ /* Dark Gray */
+  /* border: 3px solid var(--c-accent); */
+  background-color: var(--c-accent);
 
   figcaption {
-    color: var(--c-accent);
+    /* color: var(--c-accent); */
+    color: var(--c-bg);
     text-align: center;
     margin-top: 1em;
   }
@@ -366,6 +415,14 @@ blockquote {
       text-align: left;
     }
 
+    table caption {
+      font-size: 1.5em;
+      margin-bottom: 0.5em;
+      color: var(--c-accent);
+      font-weight: bold;
+    }
+    
+    
     /* Table header styling */
     th, td {
       padding: 12px 15px;
@@ -512,6 +569,13 @@ details details{
 }
 
 
+summary {
+  /* color: var(--c-accent); */
+  color: var(--c-bg);
+}
+
+
+
 
 /* Summary styling */
 /*
@@ -606,7 +670,7 @@ dialog {
   border-radius: 8px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  max-width: 400px;
+  max-width: 400px; /* TODO */
   width: 100%;
 
   &::backdrop {

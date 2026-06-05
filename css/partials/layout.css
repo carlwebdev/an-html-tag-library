@@ -8,39 +8,93 @@
 html, body {
   min-height: 100%; /* */
   /* height: 100%; */
+
+  /* background-color: var(--c-bg, #fff); */ /* fallback */
+  /* color: var(--c-text, #000); */ /* fallback */
+
+	/* background-color: gray; */ /* TEST */
+
 }
 /*
-main {
-  border: 12px solid var(--c-accent);
-}
-
-header {
-  border: 12px solid var(--c-accent);
-}
-
-footer {
+main, header, footer {
   border: 12px solid var(--c-accent);
 }
 */
 
+main {
+
+}
+
+header {
+	background-color: var(--c-accent);
+	color: #fff; /* VS DARK MODE EC WHATAVER */
+	padding-block: 1em; /* OBS - TO CANCEL THE H1 MARGIN TOP THAT IS NOT BEING RESET !!!! DO IF FIRST THEN NO MARGIN TOP ETC */
+}
+
+footer {
+	background-color: var(--c-accent);
+	color: #fff; /* VS DARK MODE EC WHATAVER */
+	padding-block: 1em; /* OBS - TO CANCEL THE H1 MARGIN TOP THAT IS NOT BEING RESET !!!! DO IF FIRST THEN NO MARGIN TOP ETC */
+}
+
+
+header, footer {
+
+}
+
+
+
+
+main section {
+
+  &:nth-child(even) {
+    background-color: var(--c-bg); /* MAIN BACKGROUND COLOR, FOR EVEN SECTIONS */
+  }
+    
+  &:nth-child(odd) {
+    background-color: var(--c-bg-alt); /* ALTERNATIVE BACKGROUND COLOR, FOR ALTERNATING SECTIONS, OR WHATEVER, NOT FOR THE MAIN BACKGROUND OF THE SITE, BUT FOR ELEMENTS THAT NEED TO STAND OUT A BIT MORE THAN THE MAIN BACKGROUND, BUT STILL BE LIGHT ENOUGH TO CONTRAST WITH THE TEXT */
+  }
+
+}
+
+
+/* copied fomr scrol snap cdn file - - - -TODO - ADD STICKY FOOTER LOGIC AS AN OPTION, EASY !!! */   /* ALSO THE SYTICKEY HEADER ETC */
+
+
+html, body {
+  height: 100%; /* ???  */ 
+  margin: 0; /* RESET */ 
+  overflow: auto;
+  scroll-snap-type: y mandatory; 
+  /* scroll-snap-type: y proximity; */  /* not working  */
+}
+
+  section,
+  header,
+  footer {
+    scroll-snap-align: start;
+  }
+
+
+
+
+
 
 section {
   /* border: 3px solid red; */ /* DEMO */
+  padding-block: 2em; /* to kil the h margin top */
 }
 
 
 
 .wrapper {
   /* position: relative; */ /* PRO EL POPOVER PSEUDO ABSOLUTE */
-  max-width: 1240px;
+
+  max-width: var(--site-max-width);
+  min-width: var(--site-min-width);
   margin-inline: auto; 
-  /* margin-block: 4em; */
+
   padding-inline: 4em; 
-  
-  /* DEMO */
-  /* max-width: 576px; */
-  max-width: 1024px;
-  /* border: 2px solid var(--c-accent); */
 }  
 
 

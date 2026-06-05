@@ -1,59 +1,31 @@
 @import url('partials/reset.css');
+
 /* @import url('partials/debugger.css'); */ /* NEW, WITH ITS OWN GITHUB REPO */
+/* @import url('https://carlwebdev.github.io/a-css-debugger/debugger.css'); */ /* NEW, WITH ITS OWN GITHUB REPO */
+
+
 @import url('partials/typography.css');
 @import url('partials/branding.css');
+
+
+
 @import url('partials/tags.css');
+
+
+
 @import url('partials/colors.css'); /* COLORS, VS VARIABLES, OR TOKENS...  opr bopth !!!!!!!  */
+@import url('partials/variables.css');
+
+
 @import url('partials/layout.css');
+@import url('partials/temp_specific.css');
 
 
+/* cerate fiel for slightly opinaited deish crietria, liek border radius applied to imgs etc  */
 
 
-
-.grid { /* TODO- RERNAME AS JUST PLAIN OLD GRID, VS CARD , ETC */
-  /* border: 3px solid orangered; */ /* DEMO */
-
-  display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
-  /**/
-  grid-template-columns: repeat(2, 1fr);
-  gap: 2em;
-  /* row-gap: 4em; */
-
-  article {
-    margin-block: 0; /* TODO */
-    /* border: 1px solid var(--c-accent); */ /* DEMO */
-  }
-  
-} /* grid */
-
-
-@media screen and (max-width: 1024px) { /* TODO */
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-} /* MEDIA-QUERY */
-
-
-
-
-
-
-  /* ARTICLE */
-  article {
-    /* 
-    margin-block: 2em;
-    padding-block: 2em;
-    outline: 1px solid var(--c-accent);
-    outline-offset: 1em;
-    */
-
-    /* margin-block:  4em; */ /* ???? */
-  }
-
-  article h3 code {
-    font-size: 1.4em;
-    margin-right: 0.3em;
-  }  
+img, iframe, video, audio, 
+/* svg,  */ /* SVGS ARE A SPECIAL CASE, BECAUSE THEY CAN BE USED IN SO MANY DIFFERENT WAYS, AND THEY CAN BE USED AS BACKGROUND IMAGES, ETC, SO I THINK IT'S BEST TO LEAVE THEM OUT OF THIS FOR NOW, BUT MAYBE IN THE FUTURE I CAN ADD SOME SPECIFIC STYLES FOR SVGS, OR MAYBE NOT, WE'LL SEE */
+canvas {
+    border-radius: 1rem; /* OPINATED, BUT I THINK IT MAKES SENSE TO HAVE IT IN THE BASE STYLE, RATHER THAN HAVING TO ADD A CLASS OR SOMETHING TO MAKE IT HAPPEN, AND I THINK IT'S A GOOD DEFAULT */
+}

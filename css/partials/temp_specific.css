@@ -1,0 +1,47 @@
+.grid { /* TODO- RERNAME AS JUST PLAIN OLD GRID, VS CARD , ETC */
+  /* border: 3px solid orangered; */ /* DEMO */
+
+  display: grid;
+  /* grid-template-columns: repeat(3, 1fr); */
+  /**/
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2em;
+  /* row-gap: 4em; */
+
+  article {
+    margin-block: 0; /* TODO */
+    /* border: 1px solid var(--c-accent); */ /* DEMO */
+  }
+  
+} /* grid */
+
+
+@media screen and (max-width: 1024px) { /* TODO */
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+} /* MEDIA-QUERY */
+
+
+
+
+
+
+  /* ARTICLE */
+  article {
+    /* 
+    margin-block: 2em;
+    padding-block: 2em;
+    outline: 1px solid var(--c-accent);
+    outline-offset: 1em;
+    */
+
+    /* margin-block:  4em; */ /* ???? */
+  }
+
+  article h3 code {
+    font-size: 1.4em;
+    margin-right: 0.3em;
+  }  

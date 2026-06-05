@@ -1,0 +1,21 @@
+/* 
+ *
+ * variables.css - Any variables that are not pertinaing to colors, but to other things, like spacing, fonts, etc.
+ * @carlwebdev
+ *
+ */
+:root {
+  /* CSS VARIABLES */ 
+  /* --demo-img : url('https://picsum.photos/1920'); */
+  --demo-img: 'https://picsum.photos/1920'; /* OBSOLETE, FOR NOW */
+
+
+
+  --site-max-width: 1240px;
+  --site-min-width: 320px;
+
+
+  /* --img-ar: 16/9; */ /* ASPECT RATIO, FOR THE DEMO, NOT USED IN THE ACTUAL SITE */
+  --img-ar: 4/3;
+
+}
