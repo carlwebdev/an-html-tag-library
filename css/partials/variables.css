@@ -11,11 +11,14 @@
 
 
 
-  --site-max-width: 1240px;
+  /* --site-max-width: 1240px; */
+  --site-max-width: 1440px;
   --site-min-width: 320px;
 
 
   /* --img-ar: 16/9; */ /* ASPECT RATIO, FOR THE DEMO, NOT USED IN THE ACTUAL SITE */
   --img-ar: 4/3;
+
+  --border-radius: 0.5em;
 
 }

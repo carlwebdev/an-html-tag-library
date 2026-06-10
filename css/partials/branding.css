@@ -107,14 +107,28 @@ li::marker {
   }
   
   
+input[type=checkbox],
+input[type=radio],
+input[type=range],
+progress {
+  accent-color: hsl(39, 100%, 50%);
+}
   
+
+
+
+
   /* 
    * 5 - SCROLLBARS - VERT  & CHECK HORIZONATLM, AROUND TABLES !! CON LO DE L ACLASE DE TABLE WRAPPER , W_TABLE, ... .TABLE ...
    */
   ::-webkit-scrollbar { 
-	width: 1em; /* Vertical scrollbar */
+	/* width: 1em; */ /* Vertical scrollbar */
+	/* width: 0.5em; */
+	width: 0.75em; 
 	height: 1em; /* Horiziontal scrollbar -  test with table RWD - OK, BUYT SOME MARGIN TOP WOULD BE NICE...  */
-	background: var(--c-bg-inv);
+	background: var(--c-bg-inv); /* ??? */
+
+	scrollbar-width: thin; /* ??????? */
   }
 	::-webkit-scrollbar-track { /* THE BACKGROUND OF THE SCROLLBAR */
 	  background: var(--c-accent-light);
@@ -123,14 +137,16 @@ li::marker {
 	}
 	  ::-webkit-scrollbar-thumb { /* THE MOVABLE SECTION OF THE SCROLLBAR */
 		background: var(--c-accent); 
-		border: 0.25em solid var(--c-accent-dark);
+		/* border: 0.25em solid var(--c-accent-dark); */
 		border-radius: 100vw;
 	  }
 		::-webkit-scrollbar-thumb:hover {
 		  background: var(--c-accent-dark);
+		  /* background: purple; */ /* TEST */
+
 		  /*
 		  background: var(--c-text);
 		  background: var(--c-white);
 		  */
-		  background: white;
+		  /* background: white; */
 		}

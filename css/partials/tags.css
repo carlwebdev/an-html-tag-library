@@ -334,14 +334,15 @@ blockquote {
 
  img, iframe,
   video, audio,
- iframe, canvas  {
-  /*
-  max-width: 100%;
-  height: auto;
-  display: block;
-  width: 100%;  
-  */
+ canvas  {
   border: 3px solid var(--c-accent); 
+
+  /*
+  outline: 3px solid red;
+  outline-offset: 3px;
+	*/
+  
+  
  }
 
 
@@ -361,8 +362,6 @@ img {
 
  video, audio,
  iframe, canvas {
-  /* display:block; */
-  width: 100%; /* This will make the tag responsive */
   border: 3px solid var(--c-accent); 
  }
 
@@ -408,11 +407,14 @@ img {
     */
     /* Table styling */
     table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      font-size: 18px;
-      text-align: left;
+      /* margin: 20px 0; */
+      /* font-size: 18px; */
+      text-align: left; /* ??? */
+
+      /*
+      border-radius:  var(--border-radius);
+      */
+
     }
 
     table caption {
@@ -436,7 +438,7 @@ img {
 
     /* Table row hover effect */
     tbody tr:hover {
-      background-color: #f1f1f1;
+      background-color: #f1f1f1; /* ??????? */
     }
 
     /* Alternate row background color */
@@ -454,27 +456,40 @@ img {
 
 /* Form container styling */
 form {
-  margin: 20px 0;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
+  padding: 1rem;
+
+  /* border: 1px solid #ddd; */
+  /* border: 2px solid var(--c-accent); */
+  border: 3px solid var(--c-accent);
+  border-radius:  var(--border-radius);
+
   background-color: #333333; /* Dark Gray */
 }
+
+
+
 
 /* Form label styling */
 form label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
+
+
+  color: var(--c-accent);
+  color: var(--c-bg); /* TODO */
 }
 
+
+
+
 /* Form input, textarea, and button styling */
-form input[type="text"],
-form input[type="password"],
-form input[type="email"],
-form input[type="search"],
-form textarea {
-  width: 100%;
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="search"],
+textarea {
+  width: 100%; /* RESET */
   padding: 10px;
   margin-bottom: 10px;
   border: 1px solid #ccc;
@@ -483,16 +498,16 @@ form textarea {
 }
 
 /* Form button styling */
-form button[type="submit"] {
+button[type="submit"] {
   background-color: var(--c-accent);
-  color: white;
+  color: white; /* TODO */
   padding: 10px 15px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
 }
 
-form button[type="submit"]:hover {
+button[type="submit"]:hover {
   background-color: #333333; /* Dark Gray */
 }    
 
@@ -505,10 +520,16 @@ form.search-form {
 
 form.search-form input[type="search"] {
   flex: 1;
-  margin-right: 10px;
+  margin-right: 10px; /* TODO, VS GAP ??  */
 
   margin-bottom: 0;
 }
+
+
+
+
+
+
 
 
 /* THERE IS A REAL POPVER !! https://www.w3schools.com/tags/tryit.asp?filename=tryhtml_att_popover */
@@ -558,21 +579,36 @@ form.search-form input[type="search"] {
 
 /* Details container styling */
 details {
-  border: var(--s-border);
+
+
+  border: 2px solid var(--c-accent);
+  border-radius:  var(--border-radius);
+  
+  
+  border: var(--s-border); /* TODO */
+
+
+
   background-color: #333333; /* Dark Gray */
   padding: 1em;
-  border-radius: 5px;
+  border-radius: 5px; /* TODO */
   margin-bottom: 0.5em; /* */
-}
-details details{
-  background-color: #36454F; /* Charcoal */
-}
 
 
-summary {
-  /* color: var(--c-accent); */
-  color: var(--c-bg);
+  color: var(--c-accent);
+  color: var(--c-bg); /* TODO */
+
 }
+
+  details details{
+    background-color: #36454F; /* Charcoal */
+  }
+
+
+  summary {
+    /* color: var(--c-accent); */
+    color: var(--c-bg);
+  }
 
 
 
@@ -705,20 +741,14 @@ dialog {
 
 
 
-
-
-
-
-
 marquee {
-
   background-color: var(--c-accent);
-
   color: white; /* TODO */
+
 
   padding-block: 1em;
   font-size: 1.618em;
-  font-weight: bold;
+
+  font-weight: bold; /* VARIABLE FOR ACCENT FONT WEIGHT, FOR EXAMPLE */
+
 }
-
-

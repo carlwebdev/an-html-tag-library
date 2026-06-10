@@ -5,6 +5,11 @@
 */
 
 
+/* BOX MODEL */
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
 
 
 /* 
@@ -16,50 +21,11 @@ html, body {
 	padding: 0;
 } 
 
-
-
-
-/* 
- * BOX MODEL 
- */
- * {
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box; /* Firefox, other Gecko */
-	box-sizing: border-box; /* Opera/IE 8+ */
-	}
-* {
-	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-	box-sizing: border-box;         /* Opera/IE 8+ */
-	}	
-
-	*, *:before, *:after {
-		-webkit-box-sizing: border-box;
-		   -moz-box-sizing: border-box;
-				box-sizing: border-box; 
-	  }
-	  
-	  
-/* 
- * 2 - BOX MODEL
- * Universal Box Sizing - https://css-tricks.com/box-sizing/ 
- */
- *, *:before, *:after {
-    box-sizing: border-box;
-  }
-
-
-
-
-
-  ol, ul {
+ol, ul {
 	/* */
 	list-style:none;
-	
 	margin: 0;
 	padding:0;
-	
-	
 }
 
 
@@ -78,7 +44,11 @@ html, body {
 /* picture tag */ 
 
 
-
+ video, audio,
+ iframe, canvas {
+  /* display:block; */
+  width: 100%; /* This will make the tag responsive */
+ }
 
 
 textarea {
@@ -91,3 +61,7 @@ textarea {
 
 
 
+table {
+	width: 100%; /* ??? ok */
+	border-collapse: collapse;
+}

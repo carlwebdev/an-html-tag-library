@@ -8,6 +8,10 @@
   /* */ 
   color-scheme: light dark; 
   --c-accent: #60f;
+  --c-accent-dark: oklch(from var(--c-accent) calc(l - 0.2) c h);
+  --c-accent-light: oklch(from var(--c-accent) calc(l + 0.2) c h);
+
+
   /*
   background-color: white;
   color: black;
@@ -19,7 +23,7 @@
   --c-bg: #fff;
 
   --c-bg-alt: #f0f0f0; /* FOR ALTERNATIVE BACKGROUND, LIKE CARDS, OR SECTIONS, OR WHATEVER, NOT FOR THE MAIN BACKGROUND OF THE SITE, BUT FOR ELEMENTS THAT NEED TO STAND OUT A BIT MORE THAN THE MAIN BACKGROUND, BUT STILL BE LIGHT ENOUGH TO CONTRAST WITH THE TEXT */
-  --c-text-alt: #333; /* FOR ALTERNATIVE TEXT, LIKE HEADINGS
+  --c-text-alt: #333; /* FOR ALTERNATIVE TEXT, LIKE HEADINGS */
 
 
 
